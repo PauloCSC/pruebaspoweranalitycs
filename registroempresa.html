@@ -3,44 +3,6 @@
 
 
 *******************************************************************************************************
-****************	InformaciÛn de establecimientos 	****************
-*******************************************************************************************************
-
-CaracterÌsticas del establecimiento
-
-AquÌ es donde puedes destacar lo que hace especial a tu establecimiento. TambiÈs puedes explicar detalles importantes, como el horario de apertura.
-
-
-Establecimiento 1
-
-Hora de apertura			Hora de cierre
-Desde		Hasta			Desde (opcional)		Hasta
-COMBO		COMBO			COMBO				COMBO
-
-UbicaciÛn
-PaÌs		Departamento		Provincia		Distrito
-COMBO		COMBO			COMBO			COMBO
-
-10*
----------------------------------------------------------------
-
-Zona de reparto
-
-
-CONTINUAR
-
-*******************************************************************************************************
-****************	Fotos del establecimiento	****************
-*******************************************************************************************************
-Fotos del establecimiento
-
-Los clientes realizan deliveries con buenas fotos. Aseg˙rate de cargar fotos de alta resoluciÛn que muestren de forma precisa los servicios de tu establecimiento. Mostraremos estas fotos en el aplicativo mÛvil de tu establecimiento y en la web de xxx.com
-
-
-
-CONTINUAR
-
-*******************************************************************************************************
 ****************	Acuerdo			****************
 *******************************************************************************************************
 
@@ -191,6 +153,7 @@ CONTINUAR
 
     </section>
     <!-- #endregion -->
+    <b>&nbsp;</b>
     <!-- #region Informacion de los establecimientos, con su ubicacion y horarios de atencion-->
     <section>
         <div>
@@ -204,24 +167,37 @@ CONTINUAR
             </select>
             <!-- Hasta aqui -->
             <br>
-            <label for="hini">A que hora abre tu negocio?</label>
-            <input type="datetime" name="hini" id="hini">
-            <br>
-            <label for="hfin">A que hora cierra tu negocio?</label>
-            <input type="datetime" name="hfin" id="hfin">
-            <br>
             <label>Dirección del Establecimiento Principal</label>
             <input type="text" placeholder="Avenida Peru Urb. las begonias" required>
             <br>
             <label>Segunda Linea dirección</label>
             <input type="text" placeholder=" Mz. A Lote 3 / Dep. 214" required>
             <br>
-            <label>Ciudad</label>
+            <label for="hini">A que hora abre tu negocio?</label>
+            <input type="datetime" name="hini" id="hini">
+            <br>
+            <label for="hfin">A que hora cierra tu negocio?</label>
+            <input type="datetime" name="hfin" id="hfin">
+            <br>
+            <label>Departamento</label>
+            <select>
+                <option value="La Libertad">Lima</option>
+                <option value="Ancash">Santiago</option>
+                <option value="Junin">Sao Paulo</option>
+            </select>
+            <label>Provincia</label>
             <select>
                 <option value="Lima">Lima</option>
                 <option value="Santiago">Santiago</option>
                 <option value="Sao Paulo">Sao Paulo</option>
                 <option value="Buenos Aires">Buenos Aires</option>
+            </select>
+            <label>Distrito</label>
+            <select>
+                <option value="SJL">Lima</option>
+                <option value="Santiago de Surco">Santiago</option>
+                <option value="La victoria">Sao Paulo</option>
+                <option value="SMP">Buenos Aires</option>
             </select>
             <br>
             <label for="codigoPostal">Código Postal</label>
