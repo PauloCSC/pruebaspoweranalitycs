@@ -196,10 +196,11 @@ CONTINUAR
 	</nav>
 	<section>
 		<h1>Información de la empresa</h1>
-		<label>Nombre de la empresa</label>
-		<input type="text" id="nameCompany" name="nameCompany" />
+		<label for="nombreEmpresa">Nombre de la empresa</label>
+		<input type="text" id="nameCompany" name="nameCompany" required/>
 		<br>
-		<label>Tipo de comidas</label>
+		<br>
+		<label for="tipoDeComidas">Tipo de comidas</label>
 		<input type="checkbox" name="tipocomidas" id="tipocomidas" value="peruana">comida peruana
 		<input type="checkbox" name="tipocomidas" id="tipocomidas" value="china">comida china
 		<input type="checkbox" name="tipocomidas" id="tipocomidas" value="sushi">sushi
@@ -208,15 +209,18 @@ CONTINUAR
 		<input type="checkbox" name="tipocomidas" id="tipocomidas" value="marina">platos marinos
 		<input type="checkbox" name="tipocomidas" id="tipocomidas" value="francesa">platos franceses
 		<br>
-		<label>Cantidad de estrellas</label>
+		<br>
+		<label for="cantidadEstrellas">Cantidad de estrellas</label>
 		<input type="radio" name="estrellas" id="estrellas">1
 		<input type="radio" name="estrellas" id="estrellas">2
 		<input type="radio" name="estrellas" id="estrellas">3
 		<input type="radio" name="estrellas" id="estrellas">4
 		<input type="radio" name="estrellas" id="estrellas">5
 		<br>
-		<label>Numero total de establecimientos</label>
-		<input type="number" name="establecimientos" id="establecimientos" min="1">
+		<br>
+        <label for="numeroEstablecimientos">Numero total de establecimientos</label>
+		<input type="number" name="establecimientos" id="establecimientos" min="1" required>
+		<br>
 		<br>
 		<label>Pagina web</label>
 		<input type="text" name="urlweb" id="urlweb">
@@ -225,11 +229,46 @@ CONTINUAR
 	<section>
 		<div>
 			<h1>Información de Establecimientos</h1>
-			<b>Donde se ubica tu establecimiento??</b>
+            <b>Donde se ubica tu establecimiento??</b>
+            <img src="map-525349_640.png" alt="Google Maps">
 			<b>Google Maps API</b>
 		</div>
 		<div>
+            <label>Dirección del Establecimiento Principal</label>
+            <input type="text" placeholder="Avenida Peru Urb. las begonias" required>
+                
+            <label>Segunda Linea dirección</label>
+            <input type="text" placeholder=" Mz. A Lote 3 / Dep. 214" required>
+                    
+            <label>País</label>
+            <select>
+                <option value="Peru">Perú</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Chile">Chile</option>
+                <option value="Brasil">Brasil</option>
+            </select> 
+                
+            <label>Ciudad</label>
+            <select>
+                <option value="Lima">Lima</option>
+                <option value="Santiago">Santiago</option>
+                <option value="Sao Paulo">Sao Paulo</option>
+                <option value="Buenos Aires">Buenos Aires</option>
+            </select>     
+              
+            <label for="codigoPostal">Código Postal</label>  
+            <input type="text" name="codPostal" id="codPostal" placeholder="+51">
 
+            <label for="codigoArea">Código de Área</label>  
+            <input type="text" name="codArea" id="codArea" placeholder="1">
+            
+            <label for="telefono">Télefono</label>  
+            <input type="text" name="telefono" id="telefono" required>
+            
+            <label for="telefonoSec">Télefono Secundario</label>  
+            <input type="text" name="telefonoSec" id="telefonoSec" required>
+
+            <b>Estos datos se mostrarán a los clientes, asegurate de que sea información correcta </b>
 		</div>
 	</section>
 	<section>
