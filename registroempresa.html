@@ -140,77 +140,81 @@ CONTINUAR
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Registra tu Empresa</title>
 </head>
+
 <body>
     <nav>
-		<ul>
-			<li><a href="#infoGeneral">Información de la empresa</a></li>
-			<li><a href="#infoEstablecimientos">Información de establecimientos</a></li>
-			<li><a href="#vistaPrevia">Vista previa</a></li>
-			<li><a href="#condiciones">Condiciones de uso</a></li>
-		</ul>
+        <ul>
+            <li><a href="#infoGeneral">Información de la empresa</a></li>
+            <li><a href="#infoEstablecimientos">Información de establecimientos</a></li>
+            <li><a href="#vistaPrevia">Vista previa</a></li>
+            <li><a href="#condiciones">Terminos y Condiciones de uso</a></li>
+        </ul>
     </nav>
     <!-- #region Informacion general de la empresa-->
-	<section>
-        
-		<h1><a name="infoGeneral">Información de la empresa</a></h1>
-        
+    <section>
+
+        <h1><a name="infoGeneral">Información de la empresa</a></h1>
+
         <label for="nombreEmpresa">Nombre de la empresa</label>
-		<input type="text" id="nameCompany" name="nameCompany" required/>
-		<br>
-		<br>
-		<label for="tipoDeComidas">Tipo de comidas</label>
-		<input type="checkbox" name="tipocomidas" id="tipocomidas" value="peruana">comida peruana
-		<input type="checkbox" name="tipocomidas" id="tipocomidas" value="china">comida china
-		<input type="checkbox" name="tipocomidas" id="tipocomidas" value="sushi">sushi
-		<input type="checkbox" name="tipocomidas" id="tipocomidas" value="italiana">comida italiana
-		<input type="checkbox" name="tipocomidas" id="tipocomidas" value="menu variado">platos variados
-		<input type="checkbox" name="tipocomidas" id="tipocomidas" value="marina">platos marinos
-		<input type="checkbox" name="tipocomidas" id="tipocomidas" value="francesa">platos franceses
-		<br>
-        <br/>
-		<label for="cantidadEstrellas">Cantidad de estrellas</label>
-		<input type="radio" name="estrellas" id="estrellas">1
-		<input type="radio" name="estrellas" id="estrellas">2
-		<input type="radio" name="estrellas" id="estrellas">3
-		<input type="radio" name="estrellas" id="estrellas">4
-		<input type="radio" name="estrellas" id="estrellas">5
-		<br>
-		<br>
+        <input type="text" id="nameCompany" name="nameCompany" required />
+        <br>
+        <br>
+        <label for="tipoDeComidas">Tipo de comidas</label>
+        <input type="checkbox" name="tipocomidas" id="tipocomidas" value="peruana">comida peruana
+        <input type="checkbox" name="tipocomidas" id="tipocomidas" value="china">comida china
+        <input type="checkbox" name="tipocomidas" id="tipocomidas" value="sushi">sushi
+        <input type="checkbox" name="tipocomidas" id="tipocomidas" value="italiana">comida italiana
+        <input type="checkbox" name="tipocomidas" id="tipocomidas" value="menu variado">platos variados
+        <input type="checkbox" name="tipocomidas" id="tipocomidas" value="marina">platos marinos
+        <input type="checkbox" name="tipocomidas" id="tipocomidas" value="francesa">platos franceses
+        <br>
+        <br />
+        <label for="cantidadEstrellas">Cantidad de estrellas</label>
+        <input type="radio" name="estrellas" id="estrellas">1
+        <input type="radio" name="estrellas" id="estrellas">2
+        <input type="radio" name="estrellas" id="estrellas">3
+        <input type="radio" name="estrellas" id="estrellas">4
+        <input type="radio" name="estrellas" id="estrellas">5
+        <br>
+        <br>
         <label for="numeroEstablecimientos">Numero total de establecimientos</label>
-		<input type="number" name="establecimientos" id="establecimientos" min="1" required>
-		<br>
-		<br>
-		<label>Pagina web</label>
-		<input type="text" name="urlweb" id="urlweb">
-		
+        <input type="number" name="establecimientos" id="establecimientos" min="1" required>
+        <br>
+        <br>
+        <label>Pagina web</label>
+        <input type="text" name="urlweb" id="urlweb">
+
     </section>
     <!-- #endregion -->
     <!-- #region Informacion de los establecimientos, con su ubicacion y horarios de atencion-->
-	<section>
-		<div>
-			<h1><a name="infoEstablecimientos">Información de establecimientos</a></h1>
-            <b>Donde se ubica tu establecimiento??</b><br>
-            <img src="map-525349_640.png" alt="Google Maps"><br>
-			<b>Google Maps API</b>
-		</div>
-		<div>
-            <label>Dirección del Establecimiento Principal</label>
-            <input type="text" placeholder="Avenida Peru Urb. las begonias" required>
-            <br>    
-            <label>Segunda Linea dirección</label>
-            <input type="text" placeholder=" Mz. A Lote 3 / Dep. 214" required>
-            <br>        
+    <section>
+        <div>
+            <!-- Esta informacion ya no se repite cuando se tenga más de un establecimiento -->
             <label>País</label>
             <select>
                 <option value="Peru">Perú</option>
                 <option value="Argentina">Argentina</option>
                 <option value="Chile">Chile</option>
                 <option value="Brasil">Brasil</option>
-            </select> 
+            </select>
+            <!-- Hasta aqui -->
+            <br>
+            <label for="hini">A que hora abre tu negocio?</label>
+            <input type="datetime" name="hini" id="hini">
+            <br>
+            <label for="hfin">A que hora cierra tu negocio?</label>
+            <input type="datetime" name="hfin" id="hfin">
+            <br>
+            <label>Dirección del Establecimiento Principal</label>
+            <input type="text" placeholder="Avenida Peru Urb. las begonias" required>
+            <br>
+            <label>Segunda Linea dirección</label>
+            <input type="text" placeholder=" Mz. A Lote 3 / Dep. 214" required>
             <br>
             <label>Ciudad</label>
             <select>
@@ -218,45 +222,61 @@ CONTINUAR
                 <option value="Santiago">Santiago</option>
                 <option value="Sao Paulo">Sao Paulo</option>
                 <option value="Buenos Aires">Buenos Aires</option>
-            </select>     
+            </select>
             <br>
-            <label for="codigoPostal">Código Postal</label>  
+            <label for="codigoPostal">Código Postal</label>
             <input type="text" name="codPostal" id="codPostal" placeholder="+51">
             <br>
-            <label for="codigoArea">Código de Área</label>  
+            <label for="codigoArea">Código de Área</label>
             <input type="text" name="codArea" id="codArea" placeholder="1">
             <br>
-            <label for="telefono">Télefono</label>  
+            <label for="telefono">Télefono</label>
             <input type="text" name="telefono" id="telefono" required>
             <br>
-            <label for="telefonoSec">Télefono Secundario</label>  
+            <label for="telefonoSec">Télefono Secundario</label>
             <input type="text" name="telefonoSec" id="telefonoSec" required>
             <br>
             <b>Estos datos se mostrarán a los clientes, asegurate de que sea información correcta </b>
-		</div>
+        </div>
+        <!--
+            Este div es opcional ya que no podemos entrar a meterlo a google mi negocio
+        -->
+        <div>
+                <h1><a name="infoEstablecimientos">Información de establecimientos</a></h1>
+                <b>Donde se ubica tu establecimiento??</b><br>
+                <img src="map-525349_640.png" alt="Google Maps"><br>
+                <b>Google Maps API</b>
+        </div>
     </section>
     <!-- #endregion -->
     <!-- #region Vista Previa que sirve para subir las fotos de la fachada y las fotos de los interiores-->
-	<section>
-		<h1><a name="vistaPrevia">Vista Previa</a></h1>
+    <section>
+        <h1><a name="vistaPrevia">Vista Previa</a></h1>
         <b>Ingrese al menos 2 fotos de la fachada</b><br>
-        <input type="file" name="fotoFachada1" id="fotoFachada1" required>
-        <input type="file" name="fotoFachada2" id="fotoFachada2" required>
+        <label for="fotofachada1">Foto Fachada 1</label><input type="file" name="fotoFachada1" id="fotoFachada1"
+            required><br>
+        <label for="fotofachada2">Foto Fachada 2</label><input type="file" name="fotoFachada2" id="fotoFachada2"
+            required><br>
         <br>
-        <b>Ingrese al menos 5 fotos de los interiores</b>
-        <input type="file" name="fotoInterior1" id="fotoInterior1" required>
-        <input type="file" name="fotoInterior2" id="fotoInterior2" required>
-        <input type="file" name="fotoInterior3" id="fotoInterior3" required>
-        <input type="file" name="fotoInterior4" id="fotoInterior4" required>
-        <input type="file" name="fotoInterior5" id="fotoInterior5" required>
+        <b>Ingrese al menos 4 fotos de los interiores</b><br>
+        <label for="fotointerior1">Foto Interior 1</label><input type="file" name="fotoInterior1" id="fotoInterior1"
+            required><br>
+        <label for="fotointerior1">Foto Interior 1</label><input type="file" name="fotoInterior2" id="fotoInterior2"
+            required><br>
+        <label for="fotointerior1">Foto Interior 1</label><input type="file" name="fotoInterior3" id="fotoInterior3"
+            required><br>
+        <label for="fotointerior1">Foto Interior 1</label><input type="file" name="fotoInterior4" id="fotoInterior4"
+            required><br>
         
+
     </section>
     <!-- #endregion -->
     <!-- #region Terminos y Condiciones para el uso de la pagina y/o aplicacion movil-->
-	<section>
-		<h1><a name="condiciones">Condiciones de uso</a></h1>
+    <section>
+        <h1><a name="condiciones">Terminos y Condiciones de uso</a></h1>
 
     </section>
     <!-- #endregion -->
 </body>
+
 </html>
