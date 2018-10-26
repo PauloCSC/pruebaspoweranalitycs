@@ -38,7 +38,7 @@
 				var reader = new FileReader();
 
 				reader.onload = function(e){
-					$('#imgFachadaPreview').html("<img src='"+ e.target.result + "' >")
+					$('#imgFachadaPreview').html("<img src='"+ e.target.result + "' />")
 				}
 
 				reader.readAsDataURL(input.files[0]);
