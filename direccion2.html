@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dirección General</title>
+</head>
+
+<body>
+    <form action="localizacion.html" method="post">
+        <h1>Donde se encuentra el local Nº2 de su empresa?</h1>
+        <br>
+        <label>Dirección del Establecimiento Principal</label>
+        <input type="text" placeholder="Avenida Peru Urb. las begonias" required>
+        <br>
+        <label>Segunda Linea dirección</label>
+        <input type="text" placeholder=" Mz. A Lote 3 / Dep. 214" required>
+        <br>
+        <!--
+    <label for="hini">A que hora abre tu negocio?</label>
+    <input type="datetime-local" name="hini" id="hini">
+    <br>
+    <label for="hfin">A que hora cierra tu negocio?</label>
+    <input type="datetime" name="hfin" id="hfin">
+    <br>
+    -->
+        <label>País</label>
+        <select>
+            <option value="Peru">Perú</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Chile">Chile</option>
+            <option value="Brasil">Brasil</option>
+        </select>
+        <label>Departamento</label>
+        <select>
+            <option value="La Libertad">Lima</option>
+            <option value="Ancash">Santiago</option>
+            <option value="Junin">Sao Paulo</option>
+        </select>
+        <label>Provincia</label>
+        <select>
+            <option value="Lima">Lima</option>
+            <option value="Santiago">Santiago</option>
+            <option value="Sao Paulo">Sao Paulo</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+        </select>
+        <label>Distrito</label>
+        <select>
+            <option value="SJL">Lima</option>
+            <option value="Santiago de Surco">Santiago</option>
+            <option value="La victoria">Sao Paulo</option>
+            <option value="SMP">Buenos Aires</option>
+        </select>
+        <br>
+        <label for="codigoPostal">Código Postal</label>
+        <input type="text" name="codPostal" id="codPostal" placeholder="+51">
+        <br>
+        <label for="codigoArea">Código de Área</label>
+        <input type="text" name="codArea" id="codArea" placeholder="1">
+        <br>
+        <label for="telefono">Télefono</label>
+        <input type="text" name="telefono" id="telefono" required>
+        <br>
+        <label for="telefonoSec">Télefono Secundario</label>
+        <input type="text" name="telefonoSec" id="telefonoSec" required>
+        <br>
+        <b>Estos datos se mostrarán a los clientes, asegurate de que sea información correcta </b>
+    </form>
+
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -80,10 +80,10 @@
             </select>
             <label>Distrito</label>
             <select>
-                <option value="SJL">Lima</option>
-                <option value="Santiago de Surco">Santiago</option>
-                <option value="La victoria">Sao Paulo</option>
-                <option value="SMP">Buenos Aires</option>
+                <option value="SJL">San Juan de Lurigancho</option>
+                <option value="Santiago de Surco">Santiago de Surco</option>
+                <option value="La victoria">La Victoria</option>
+                <option value="SMP">San Martín de Porres</option>
             </select>
             <br>
             <label for="codigoPostal">Código Postal</label>
@@ -104,10 +104,7 @@
             Este div es opcional ya que no podemos entrar a meterlo a google mi negocio
         -->
         <div>
-            <h1><a name="infoEstablecimientos">Información de establecimientos</a></h1>
-            <b>Donde se ubica tu establecimiento??</b><br>
-            <img src="map-525349_640.png" alt="Google Maps"><br>
-            <b>Google Maps API</b>
+            
         </div>
     </section>
     <!-- #endregion -->
@@ -148,12 +145,12 @@
     <!-- #endregion -->
 
     <script>
-    let input = document.getElementById("gogiselaCome")
-    let string = ""
-    for(let i =0 ; i<5; i++){
-        string+=`<input type="radio" name="estrellas" id="estrellas"> ${i+1}`;
-    }
-    input.innerHTML=string;
+        let input = document.getElementById("gogiselaCome")
+        let string = ""
+        for (let i = 0; i < 5; i++) {
+            string += `<input type="radio" name="estrellas" id="estrellas"> ${i + 1}`;
+        }
+        input.innerHTML = string;
     </script>
 </body>
 
