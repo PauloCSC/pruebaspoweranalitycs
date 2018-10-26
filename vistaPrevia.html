@@ -6,22 +6,23 @@
 	<style>
 		div {width:43px;height:43px;border:1px solid #CCCCCC;}
 	</style>
-	<script>
-		function permitirSoltar(ev) {
-			ev.preventDefault();
-		}
-		function soltar(ev) {
-			ev.preventDefault();
-			var data = ev.dataTransfer.getData("Text");
-			ev.target.appendChild(document.getElementById(data));
-		}
-		function arrastrar(ev) {
-			ev.dataTransfer.setData("Text", ev.target.id);
-		}
-	</script>
+	
 </head>
 <body>
 	<div ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
-	<img id="img" src="/conshimg/logo.png" draggable="true" ondragstart="arrastrar(event)">
+	<img id="img" src="map-525349_640.png" draggable="true" ondragstart="arrastrar(event)">
+	<script>
+			function permitirSoltar(ev) {
+				ev.preventDefault();
+			}
+			function soltar(ev) {
+				ev.preventDefault();
+				var data = ev.dataTransfer.getData("Text");
+				ev.target.appendChild(document.getElementById(data));
+			}
+			function arrastrar(ev) {
+				ev.dataTransfer.setData("Text", ev.target.id);
+			}
+		</script>
 </body>
 </html>
