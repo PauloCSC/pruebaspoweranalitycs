@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Vista Previa</title>
+	<meta charset="UTF-8">
+	<title>Didesweb Drag & Drop</title>
+	<style>
+		div {width:43px;height:43px;border:1px solid #CCCCCC;}
+	</style>
+	<script>
+		function permitirSoltar(ev) {
+			ev.preventDefault();
+		}
+		function soltar(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("Text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+		function arrastrar(ev) {
+			ev.dataTransfer.setData("Text", ev.target.id);
+		}
+	</script>
 </head>
 <body>
-    
+	<div ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+	<img id="img" src="/conshimg/logo.png" draggable="true" ondragstart="arrastrar(event)">
 </body>
 </html>
