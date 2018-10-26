@@ -1,2 +1,1 @@
-<?php
-header("terminos.html");
+<?php header( 'Location: /terminos.html' ) ;  ?>
