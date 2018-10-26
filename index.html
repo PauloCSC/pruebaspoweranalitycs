@@ -7,12 +7,18 @@
 </head>
 
 <body>
-	<img src="home-office-336377_1280.jpg" alt="RegistraTuempresa">
-	<form action="registroempresa.html" method="get">
-		<input type="submit" value="Registro online">
-	</form>
-	<form action="#" method="get">
-		<input type="submit" value="Registro offline">
+	<progress value="0" min="0" max="100"></progress>
+	<form action="infoGeneral1.html" method="POST">
+		<label for="RUC">Ingrese su número de RUC</label> <br>
+		<input type="text" name="RUC" id="RUC"><br>
+		<label for="nomEmpresa">Ingrese el nombre de su empresa</label><br>
+		<input type="text" name="nomEmpresa" id="nomEmpresa"><br>
+		<label for="nomComercial">Ingrese el nombre comercial de su empresa</label><br>
+		<input type="text" name="nomComercial" id="nomComercial"><br>
+		<input type="submit" value="Continuar">
+		<input type="submit" value="Retomar un registro previo"> <b>Para retomar su registro previo, solo es necesario su RUC.
+			si es que ya ha ingresado los otros datos anteriormente.
+		</b>
 	</form>
 </body>
 </html>

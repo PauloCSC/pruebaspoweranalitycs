@@ -1,111 +1,9 @@
-<!--
-
-
-
-*******************************************************************************************************
-****************	Acuerdo			****************
-*******************************************************************************************************
-
-El Acuerdo de ColaboraciÛn
-
-Para que tu establecimiento estÈ registrado lo antes posible, acepta los tÈrminos y condiciones sobre el porcentaje de comisiÛn que aparecen abajo.
-
-
-Acuerdo de ColaboraciÛn con XXX.com 
-
-entre:								y t˙, el Establecimiento
-XXX.COM 							Nombre del establecimiento
-DirecciÛn 1							EMPRESA XXX
-DirecciÛn 2
-Per˙								Persona de contacto
-								luis pucutay	Editar
-Registro de la C·mara de Comercio de Lima, 			
-n˙mero de inscripciÛn 123:					RazÛn social
-descripciÛn 1							Empresa individual luis pucutay		Editar
-								
-
-								DirecciÛn (entidad jurÌdica)
-								DirecciÛn 1
-
-
-Acuerdan lo siguiente:
-
-Porcentaje de comisiÛn
-El porcentaje de comisiÛn ser· del 14%	ø	QuÈ consigo por la comisiÛn que pago?
-
-EjecuciÛn y cumplimiento
-El acuerdo sÛlo se har· efectivo tras la aprobaciÛn y confirmaciÛn de XXX.COM.
-
-Condiciones generales
-Este Acuerdo est· sujeto y se rige por las condiciones generales (los "TÈrminos y Condiciones"). El establecimiento manifiesta que ha leÌdo y acepta los tÈrminos y condiciones.
-
-Fecha
-19 Agosto 2017
-
-Marca las dos casillas que encontrar·s a continuaciÛn:
-Certifico que esta es una empresa que brinda servicio de delivery legar y que cuenta con todas las licencias y permisos necesarios, los cuales pueden mostrarse a primer requerimiento. XX.COM, se reserva el derecho de verificar e investigar cualquier dato que proporciones durante el registro.
-He leÌdo, acepto y estoy de acuerdo con las "Condiciones generales de entrega".
-
-
-°Ya casi est·s!
-Cuando acabes, te enviaremos por e-mail una copia del acuerdo firmado. Recuerda que puedes cerrar temporalnete tu establecimiento o eliminarlo de la p·gina web XXX.COM en cualquier momento.
-
-CONTINUAR
-
-
-*******************************************************************************************************
-****************	VISTA PREVIA			****************
-*******************************************************************************************************
-
-Vista previa del ESTABLECIMIENTO
-
-Ten en cuenta que se trata de una siemple vista previa, basada en los datos que has proporcionado sobre tu establecimiento. Puedes editar y actualiziar los datos y visualizar aquÌ cÛmo aparecerÌa tu establecimiento en la p·gina web de XXX.COM
-
-
-ESTABLECIMIENTO
-DirecciÛn 1
-
-FOTO
-
-AquÌ aparecer· la descripciÛn de tu establecimiento, adem·s de informaciÛn sobre los alrededores y los lugares de interÈs para los viajeros.
-
-N˙mero de establecimientos: 2
-
-
-Tipo de productos del ESTABLECIMIENTO
-
-CaracterÌsticas
-
-Hora de Apertura
-xxxx
-
-Hora de cierre
-xxxx
-
-
-Condiciones del ESTABLECIMIENTO
-
-CancelaciÛn / Prepago
-Todas las reservas son 100% reembolsables.	Editar
-
-Tarjetas de c¥redito aceptadas
-No se aceptan tarjetas de crÈdito o dÈbito como forma de pago.	Editar
-
-ConfiguraciÛn de IGV/Impuestos
-incluido	Editar
-
-Impuesto municipal
-incluido	Editar
-
-
-CONTINUAR
--->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Registra tu Empresa</title>
+    <title>Información General</title>
 </head>
 
 <body>
@@ -117,31 +15,11 @@ CONTINUAR
             <li><a href="#condiciones">Terminos y Condiciones de uso</a></li>
         </ul>
     </nav>
-    <!-- #region Informacion general de la empresa-->
-    <section>
-
-        <h1><a name="infoGeneral">Información de la empresa</a></h1>
-
-        <label for="nombreEmpresa">Nombre de la empresa</label>
-        <input type="text" id="nameCompany" name="nameCompany" required /><strong>(*)</strong>
-        <br>
-        <br>
-        <label for="tipoDeComidas">Tipo de comidas</label>
-        <input type="checkbox" name="tipocomidas" id="tipocomidas" value="peruana">comida peruana
-        <input type="checkbox" name="tipocomidas" id="tipocomidas" value="china">comida china
-        <input type="checkbox" name="tipocomidas" id="tipocomidas" value="sushi">sushi
-        <input type="checkbox" name="tipocomidas" id="tipocomidas" value="italiana">comida italiana
-        <input type="checkbox" name="tipocomidas" id="tipocomidas" value="menu variado">platos variados
-        <!-- 
-            que se pueda desplegar un textfield cuando se da click al checkbox para que se 
-            pueda rellenar con los platos que ofrece (un textfield con un boton para agregar
-            otro textfield)
-        -->
-        <input type="checkbox" name="tipocomidas" id="tipocomidas" value="marina">platos marinos
-        <input type="checkbox" name="tipocomidas" id="tipocomidas" value="francesa">platos franceses
-        <br>
-        <br />
+    <progress value="10" min="0" max="100"></progress>
+    <br><br>
+    <form action="infoGeneral2.html" method="post">
         <label for="cantidadEstrellas">Cantidad de estrellas</label>
+        <div id="gogiselaCome"></div>
         <input type="radio" name="estrellas" id="estrellas">1
         <input type="radio" name="estrellas" id="estrellas">2
         <input type="radio" name="estrellas" id="estrellas">3
@@ -155,11 +33,14 @@ CONTINUAR
         <br>
         <label>Pagina web</label>
         <input type="text" name="urlweb" id="urlweb">
+        <input type="submit" value="Continuar">
+    </form>
 
-    </section>
-    <!-- #endregion -->
-    <b>&nbsp;</b>
-    <!-- #region Informacion de los establecimientos, con su ubicacion y horarios de atencion-->
+</body>
+
+</html>
+
+<body>
     <section>
         <div>
             <!-- Esta informacion ya no se repite cuando se tenga más de un establecimiento -->
@@ -179,9 +60,9 @@ CONTINUAR
             <input type="text" placeholder=" Mz. A Lote 3 / Dep. 214" required>
             <br>
             <label for="hini">A que hora abre tu negocio?</label>
-            <input type="datetime" name="hini" id="hini">
+            <input type="datetime-local" name="hini" id="hini"><!-- tiene que ser un combo-->
             <br>
-            <label for="hfin">A que hora cierra tu negocio?</label>
+            <label for="hfin">A que hora cierra tu negocio?</label><!-- tiene que ser un combo-->
             <input type="datetime" name="hfin" id="hfin">
             <br>
             <label>Departamento</label>
@@ -223,10 +104,10 @@ CONTINUAR
             Este div es opcional ya que no podemos entrar a meterlo a google mi negocio
         -->
         <div>
-                <h1><a name="infoEstablecimientos">Información de establecimientos</a></h1>
-                <b>Donde se ubica tu establecimiento??</b><br>
-                <img src="map-525349_640.png" alt="Google Maps"><br>
-                <b>Google Maps API</b>
+            <h1><a name="infoEstablecimientos">Información de establecimientos</a></h1>
+            <b>Donde se ubica tu establecimiento??</b><br>
+            <img src="map-525349_640.png" alt="Google Maps"><br>
+            <b>Google Maps API</b>
         </div>
     </section>
     <!-- #endregion -->
@@ -239,7 +120,7 @@ CONTINUAR
         -->
         <label for="fotofachada1">Foto Fachada 1</label><input type="file" name="fotoFachada1" id="fotoFachada1"
             required><br>
-        
+
         <!--
         <b>Ingrese al menos 4 fotos de los interiores</b><br>
         <label for="fotointerior1">Foto Interior 1</label><input type="file" name="fotoInterior1" id="fotoInterior1"
@@ -251,7 +132,7 @@ CONTINUAR
         <label for="fotointerior1">Foto Interior 4</label><input type="file" name="fotoInterior4" id="fotoInterior4"
             required><br>
         -->
-            <!--
+        <!--
 
             Agregar fotos de los platos, una foto por cada plato
 
@@ -265,6 +146,15 @@ CONTINUAR
 
     </section>
     <!-- #endregion -->
+
+    <script>
+    let input = document.getElementById("gogiselaCome")
+    let string = ""
+    for(let i =0 ; i<5; i++){
+        string+=`<input type="radio" name="estrellas" id="estrellas"> ${i+1}`;
+    }
+    input.innerHTML=string;
+    </script>
 </body>
 
 </html>
