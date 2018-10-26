@@ -2,27 +2,54 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Didesweb Drag & Drop</title>
-	<style>
-		div {width:43px;height:43px;border:1px solid #CCCCCC;}
+	<title>Vista Previa</title>
+	<style media="screen">
+		#uploadForm,
+		#imgFachadaPreview,
+		#imgPlatillosPreview{
+			width: 20%;
+			margin: 0 auto;
+		}
 	</style>
 	
 </head>
 <body>
-	<div ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
-	<img id="img" src="map-525349_640.png" draggable="true" ondragstart="arrastrar(event)">
-	<script>
-			function permitirSoltar(ev) {
-				ev.preventDefault();
+	<h1>Vista Previa</h1>
+	<form id="uploadForm" action="guardarImagen.php" method="post">
+		<div id="imgFachadaPreview">
+
+		</div>
+		<label for="imgFachada">Ingrese una foto de su fachada o logotipo</label>
+		<input type="file" name="imagenFachada" id="imagenFachada">
+		<div id="imgPlatillosPreview">
+
+		</div>
+		<label for="imgPlatillos">Ingrese foto de sus platillos</label>
+		<input type="file" name="imgPlatillo1" id="imgPlatillo1">
+		<input type="file" name="imgPlatillo2" id="imgPlatillo2">
+		<input type="file" name="imgPlatillo3" id="imgPlatillo3">
+		<input type="submit" value="Continuar">
+	</form>
+
+	<script type="text/javascript">
+	(function(){
+		function filePreview(input){
+			if(input.files && input.files[0]){
+				var reader = new FileReader();
+
+				reader.onload = function(e){
+					$('#imgFachadaPreview').html("<img src='"+ e.target.result + "' >")
+				}
+
+				reader.readAsDataURL(input.files[0]);
+
+				$('#imagenFachada').change(function(){
+					filePreview(this);
+				});
 			}
-			function soltar(ev) {
-				ev.preventDefault();
-				var data = ev.dataTransfer.getData("Text");
-				ev.target.appendChild(document.getElementById(data));
-			}
-			function arrastrar(ev) {
-				ev.dataTransfer.setData("Text", ev.target.id);
-			}
-		</script>
+		}
+	})();
+	</script>
+
 </body>
 </html>

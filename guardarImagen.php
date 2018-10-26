@@ -1,0 +1,2 @@
+<?php
+header("terminos.html");
