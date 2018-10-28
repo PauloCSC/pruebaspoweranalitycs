@@ -5,10 +5,13 @@
 	<title>Vista Previa</title>
 	<style media="screen">
 		#uploadForm,
-		#imgFachadaPreview,
-		#imgPlatillosPreview{
+		#imgFachadaPreview{
 			width: 20%;
 			margin: 0 auto;
+		}
+		img{
+			max-width: 0px;
+			height: auto;
 		}
 	</style>
 	
@@ -16,11 +19,14 @@
 <body>
 	<h1>Vista Previa</h1>
 	<form id="uploadForm" action="guardarImagen.php" method="post">
+		
+		<label for="imgFachada">Ingrese una foto de su fachada o logotipo</label>
+		<input type="file" name="imagenFachada" id="imagenFachada">
 		<div id="imgFachadaPreview">
 
 		</div>
-		<label for="imgFachada">Ingrese una foto de su fachada o logotipo</label>
-		<input type="file" name="imagenFachada" id="imagenFachada">
+		<!--
+			
 		<div id="imgPlatillosPreview">
 
 		</div>
@@ -29,6 +35,8 @@
 		<input type="file" name="imgPlatillo2" id="imgPlatillo2">
 		<input type="file" name="imgPlatillo3" id="imgPlatillo3">
 		<input type="submit" value="Continuar">
+		
+		-->
 	</form>
 	<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script> 
 	<script type="text/javascript">
@@ -40,15 +48,12 @@
 				reader.onload = function(e){
 					$('#imgFachadaPreview').html("<img src='"+ e.target.result + "' />")
 				}
-
 				reader.readAsDataURL(input.files[0]);
-
-				
 			}
 		}
-		$('#imagenFachada').change(function(){
-					filePreview(this);
-				});
+		$('imagenFachada').change(function(){
+			filePreview(this);
+		});
 	})();
 	</script>
 
